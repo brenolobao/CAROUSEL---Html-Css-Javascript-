@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .2s;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-lite;
+    src: url(Roboto/Roboto-Light.ttf);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(75deg, lightskyblue,lightseagreen);
+}
+
+.cards {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    flex-flow: column;
+}
+
+.card {
+    width: 300px;
+    height: 450px;
+    display: none;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 10px 50px rgba(0,0,0,.5);
+}
+.fi{
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    font-size: 25pt;
+    cursor:pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-flow: column nowrap;
+    padding: .85em;
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, .0) 75%);
+}
+
+.title {
+    font: bold 23pt roboto;
+    width: 100%;
+    padding: 0em 0;
+}
+
+.subtitle {
+    font: normal 18pt roboto;
+    width: 100%;
+}
+.type-rate{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding:.5em 0em;
+}
+.stars{
+    display: flex;
+}
+.star{
+    font-size: 13pt;
+    width: 35px;
+    text-align: center;
+}
+#starblack{
+    width: 20px;
+}
+.note{
+    font:normal 13pt roboto;
+    padding: 0em 1em;
+}
+
+.descri {
+    font: lighter 13pt roboto-lite;
+    padding-bottom: 1em;    
+    border-bottom: 1px solid rgba(200, 200, 200, 0.527);
+}
+
+#c1 {
+    background: url(img/enolaholmes.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#c2 {
+    background: url(img/good-place.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#c3 {
+    background: url(img/The-Blacklist.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.active {
+    display: flex;
+    animation: card .8s ease-in-out;
+}
+
+@keyframes card {
+    from {
+        transform: scale(.8) translateY(-50px);
+        opacity: 0;
+    }
+}
+
+.button {
+    background: transparent;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: .5em 1em;
+    cursor: pointer;
+    border-radius: 50%;
+    font: normal 18pt arial;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: button .90s ease-in-out alternate infinite;
+}
+
+.button:hover {
+    border-color: white;
+    color: white;
+}
+
+@keyframes button {
+    from {
+        transform: translateX(-7px);
+    }
+
+    to {
+        transform: translateX(7px);
+    }
+}
